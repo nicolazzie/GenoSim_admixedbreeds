@@ -1,0 +1,36 @@
+User options for the genomic simulation program are collected in this text file.
+For the time being, user friendliness is does not have a high priority!!
+I am keeping the first 10 lines for comments.
+All values are going to be read from column 1 (to 10) and treated as INTEGER.
+Let the "option" descriptions start at column 11.
+
+
+
+
+#####     MAKE SURE THIS IS LINE 10     #####
+100                Number of   males in the base population
+100                Number of females in the base population
+30                Number of   males in breed step
+30                Number of females in breed step
+2                 Number of chromosomes
+56              Number of linkage groups
+3000               Number of generations for base data
+10                Number of generations for breed data (if not pedigree)
+1                 Number of (expected) recombinations per chromosome
+4                 -log(10) of the mutation rate for SNPs
+8,0.3             (HIGH,LOW) Proportion of (total) SNPs assigned to be QTL.
+0.1,0.25,0.8      (3) heritabilities of the simulated traits.
+0.5,-0.5          (2) Gcorr of traits ( A-->B, A-->C). Gcorr B-->C = 0
+3                 Write genotypes: 1 for haplotypes, 2 for genotypes, any other number for no.
+0.00              Threshold of MAF used for output of genotypes (freqs < MAF will be excluded)
+10                 # of (last) breed generations to be written (for non pedigree pops)
+0                 # of (last) animals to be written (for pedigree pops - Use "0" if you want them all)
+2                 Number of breeds to be analyzed 
+H3_A,H1_B         Type of selection for each (NONPEDIGREE) breed ([H/L][1/2/3]_[A/B/C] for Nqtl>Me(H) or Nqtl<Me(L), 1/2/3 h2 and trait group A/B/C (or X/Y/Z).
+30,30,80,80   Proportions of males (Nbreed) and females (Nbreed)
+50                Proportion of admixture between A/B (WARNING!! THIS WORKS FOR JUST 2 POPULATIONS! Unexpected behaviour if more than 1 is considered!)
+0                 Number of populations with real pedigree (add namefiles in the lines below (as many as populations)!)
+                  Name of pedigree (if more than 1 pop, please separate name files with commas)
+1                 Distribution of QTL effects (1 for ~N, 2 for ~gamma). If gamma add a line with SHAPE param
+0.4               Shape for gamma (if Distribution==2)
+
